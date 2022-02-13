@@ -1,0 +1,51 @@
+.team {
+  display: flex;
+  position: relative;
+  min-height: 933px;
+  overflow-y: clip;
+
+  &::after {
+    content: url("../img/overlay-bcg.png");
+    position: absolute;
+    bottom: -175px;
+    left: -150px;
+  }
+}
+
+.team__about {
+  width: 588px;
+  margin-top: 202px;
+  margin-left: 71px;
+  position: relative;
+  z-index: 10;
+
+  h2,
+  p {
+    margin: 0;
+    color: $main-white;
+    letter-spacing: 1.5px;
+  }
+
+  h2 {
+    @include font($montserrat, 30px, 37px, 800, normal);
+    padding-bottom: 50px;
+  }
+
+  p {
+    @include font($montserrat, 16px, 20px, 400, normal);
+    padding-bottom: 5px;
+    letter-spacing: 0.83px;
+  }
+}
+
+.team__coaches {
+  position: absolute;
+  width: 586px;
+  right: -53px;
+
+  img {
+    position: absolute;
+    top: 137px;
+    left: 7px;
+  }
+}

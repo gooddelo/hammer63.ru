@@ -1,0 +1,136 @@
+.services {
+  position: relative;
+  min-height: 837px;
+  overflow-y: clip;
+
+  h2 {
+    @include font($montserrat, 30px, 37px, 800, normal);
+    color: $main-white;
+    margin: 0 auto;
+    width: 324px;
+    padding-top: 66px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    width: 4032px;
+    height: 3975px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #242222 80%, #432445 94%);
+    left: -1447px;
+    top: 0;
+  }
+}
+
+.services__wrapper {
+  width: 947px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.services__list {
+  display: flex;
+  @include reset-list;
+  margin: 93px auto 0;
+}
+
+.services__item {
+  min-width: 295px;
+  min-height: 361px;
+  margin-right: 31px;
+  display: flex;
+  flex-flow: column wrap;
+
+  img {
+    margin: 0 auto;
+  }
+
+  p {
+    @include font($montserrat, 20px, 24px, 800, normal);
+    color: $main-white;
+    margin: 0;
+    text-align: center;
+    margin-top: 41px;
+  }
+
+  &:first-child {
+
+    p {
+      margin-top: 17px;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  &:hover img,
+  &:focus-visible img {
+    transition: $trans--300;
+    transform: scale(1.03);
+  }
+
+  &:hover p,
+  &:focus-visible p {
+    transition: $trans--300;
+    color: $vivid-yellow;
+  }
+
+  &:active img,
+  &:active p {
+    transform: scale(0.95);
+  }
+}
+
+.services__btn {
+  position: absolute;
+  border: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: $trans--300;
+
+  svg {
+    fill: none;
+  }
+
+  &:hover svg,
+  &:focus-visible svg {
+    fill: #c7e80a;
+  }
+
+  &--prev {
+    left: 25px;
+    top: 329px;
+  }
+
+  &--next {
+    right: 23px;
+    top: 317px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.services__schedule {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 74px;
+  margin-top: 207px;
+  margin-left: 71px;
+
+  p {
+    @include font($montserrat, 30px, 38px, 800, normal);
+    color: $main-white;
+    margin: 0;
+    width: 528px;
+    padding-right: 10px;
+    letter-spacing: 1.5px;
+  }
+}

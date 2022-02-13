@@ -1,0 +1,44 @@
+.header {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  min-height: 45px;
+}
+
+.header__nav-wrapper {
+  display: flex;
+}
+
+.header__nav-list {
+  @include reset-list;
+  display: flex;
+  flex-flow: row wrap;
+  width: 737px;
+  margin-left: 147px;
+  margin-right: 55px;
+}
+
+.header__nav-item {
+  @include font($montserrat, 13px, 16px, 400, normal);
+  margin-right: 58px;
+
+  &:last-child {
+   margin-right: 0;
+ }
+  a {
+    color: $main-white;
+    cursor: pointer;
+  }
+}
+
+.header__tel {
+  @include font($montserrat, 13px, 16px, 400, normal);
+  color: $main-white;
+}
+
+.header__nav-item:hover a,
+.header__tel:hover {
+  transition: $trans--300;
+  color: $vivid-yellow;
+}

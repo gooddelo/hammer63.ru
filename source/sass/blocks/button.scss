@@ -1,0 +1,30 @@
+.button {
+  @include flex-center;
+  @include font($montserrat, 20px, 24px, 600, normal);
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  padding: 0;
+  width: 333px;
+  min-height: 71px;
+  background-color: $vivid-yellow;
+  color: $mostly-black;
+  border-radius: $btn-radius;
+  margin-top: 83px;
+
+  &:hover,
+  &:focus-visible {
+    transition: $trans--300;
+    background-color: $hover-btn;
+  }
+
+  &--services {
+    margin: 0;
+    margin-left: 17px;
+  }
+
+  &--team {
+    margin-top: 58px;
+    margin-bottom: 30px;
+  }
+}
