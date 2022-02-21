@@ -1,0 +1,31 @@
+.schedule {
+  animation: bounce .6s;
+  position: fixed;
+  top: 5%;
+  right: 0;
+  bottom: 5%;
+  left: 0;
+  z-index: 50;
+  background-color: $footer-bcg;
+  width: 1065px;
+  margin: 0 auto;
+  height: 366px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 44px 69px;
+
+  h2 {
+    @include font($montserrat, 20px, 24px, 800, normal);
+    color: $main-white;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding-bottom: 42px;
+  }
+}
+
+.schedule__wrapper {
+  width: 380px;
+  margin: 0 auto;
+}
