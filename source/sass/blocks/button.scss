@@ -27,4 +27,141 @@
     margin-top: 58px;
     margin-bottom: 30px;
   }
+
+  &--back {
+    position: absolute;
+    background-color: transparent;
+    border: 0.5px solid $main-white;
+    width: 52px;
+    min-height: 52px;
+    border-radius: 50%;
+    margin: 0;
+    left: -2px;
+    top: -11px;
+    // transform: rotate(180deg);
+
+    &::after {
+      position: absolute;
+      left: 65px;
+      content: "Назад";
+      color: $main-white;
+      // transform: rotate(-180deg);
+      @include font($montserrat, 13px, 16px, 300, normal)
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      right: 10px;
+      width: 29px;
+      height: 1px;
+      background-color: $main-white;
+      display: block;
+    }
+
+    span::after,
+    span::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 1px;
+      right: 35px;
+      background-color: $main-white;
+    }
+
+    span::after {
+      top: 24px;
+      transform: rotate(135deg);
+    }
+
+    span::before {
+      top: 27px;
+      transform: rotate(-135deg);
+    }
+
+    &:hover,
+    &:focus-visible {
+      transition: $trans--300;
+      background-color: $main-white;
+
+      span::after,
+      span::before,
+      &::before {
+        transition: $trans--300;
+        background-color: $mostly-black;
+      }
+    }
+  }
+
+  &--more {
+    @include font($montserrat, 16px, 20px, 500, normal);
+    background-color: transparent;
+    border: 1px solid $btn-more;
+    color: $btn-more;
+    width: 278px;
+    min-height: 55px;
+    border-radius: $btn-more-radius;
+    margin-top: auto;
+
+    &:hover,
+    &:focus-visible {
+      transition: $trans--300;
+      background-color: $btn-more;
+      color: $mostly-black;
+    }
+  }
+
+  &--close {
+    position: absolute;
+    width: 50px;
+    min-height: 50px;
+    background-color: transparent;
+    margin: 0;
+    left: 95.3%;
+    top: 0;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $main-white;
+      width: 18px;
+      height: 2px;
+      z-index: 2;
+      top: 23px;
+      right: 15px;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: transparent;
+    }
+  }
+
+  &--schedule {
+    background-color: transparent;
+    border: 3px solid $vivid-yellow;
+    color: $vivid-yellow;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+    margin-bottom: 29px;
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $hover-btn;
+      color: $footer-bcg;
+    }
+  }
 }
