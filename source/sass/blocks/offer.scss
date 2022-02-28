@@ -1,0 +1,28 @@
+.offer__wrapper {
+  width: 868px;
+  margin: 0 auto 68px;
+  min-height: 287px;
+  border: 1px solid $vivid-yellow;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 42px 23px 54px;
+
+  h2,
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    @include font($montserrat, 36px, 44px, 800, normal);
+    color: $vivid-yellow;
+    padding-bottom: 20px;
+  }
+
+  p {
+    @include font($montserrat, 32px, 40px, 700, normal);
+    color: $main-white;
+    text-align: center;
+    padding-bottom: 17px;
+  }
+}

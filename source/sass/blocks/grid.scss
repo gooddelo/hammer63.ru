@@ -1,0 +1,115 @@
+.grid {
+
+  h2 {
+    width: 347px;
+    margin: 0 auto;
+    @include font($montserrat, 20px, 25px, 800, normal);
+    color: $vivid-yellow;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+}
+
+.grid__wrapper {
+  margin-bottom: 75px;
+
+  &--massage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 26px;
+  }
+}
+
+.grid__wrapper-item {
+  width: 360px;
+}
+
+.grid__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  column-gap: 30px;
+  row-gap: 26px;
+}
+
+.grid__item {
+  position: relative;
+  background-color: $footer-bcg;
+  width: 360px;
+  min-height: 194px;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 19px 15px 25px;
+
+  &--sauna {
+    justify-content: center;
+    padding: 19px 37px 25px;
+  }
+
+  &--solarium {
+    min-height: 110px;
+    justify-content: center;
+  }
+
+  &--aqua {
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  &--other {
+    padding-top: 39px;
+  }
+
+  &--offer::after {
+    position: absolute;
+    content: url("../img/icon/offer.svg");
+    bottom: -18px;
+    right: -14px;
+  }
+
+  p {
+    margin: 0;
+    @include font($montserrat, 16px, 20px, 400, normal);
+    color: $main-white;
+    text-align: center;
+  }
+
+  a {
+    @include font($montserrat, 16px, 20px, 600, normal);
+    color: $vivid-yellow;
+  }
+}
+
+.grid__item-tel {
+  padding-top: 24px;
+
+  &:last-child {
+    padding-top: 20px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transition: $trans--300;
+    color: $main-white;
+  }
+}
+
+.grid__item-detail {
+  padding-top: 29px;
+
+  a {
+    @include font($montserrat, 16px, 20px, 400, normal);
+    color: $main-white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus-visible {
+      transition: $trans--300;
+      color: $vivid-yellow;
+      text-decoration: none;
+    }
+  }
+}

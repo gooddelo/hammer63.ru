@@ -1,12 +1,4 @@
 .schedule {
-  animation: bounce .6s;
-  position: fixed;
-  top: 5%;
-  right: 0;
-  bottom: 5%;
-  left: 0;
-  z-index: 50;
-  background-color: $footer-bcg;
   width: 1065px;
   margin: 0 auto;
   height: 366px;
@@ -28,4 +20,98 @@
 .schedule__wrapper {
   width: 380px;
   margin: 0 auto;
+}
+
+.schedule__container {
+  width: 810px;
+  margin: 0 auto;
+}
+
+.schedule__inner {
+  margin-bottom: 100px;
+}
+
+.schedule__list {
+  @include reset-list;
+  margin-bottom: 40px;
+}
+
+.schedule__title,
+.schedule__item {
+  min-height: 66px;
+  background-color: $footer-bcg;
+  margin-bottom: 15px;
+}
+
+.schedule__title {
+  position: relative;
+  cursor: pointer;
+  @include flex-center;
+
+  svg {
+    transition: $trans--300;
+    position: absolute;
+    right: 30px;
+    top: 25px;
+  }
+
+  h2 {
+    @include font($montserrat, 16px, 20px, 800, normal);
+    color: $vivid-yellow;
+  }
+}
+
+.schedule__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 19px 20px 29px;
+
+  p,
+  time {
+    @include font($montserrat, 16px, 20px, 700, normal);
+    margin: 0;
+    color: $main-white;
+  }
+
+  p:first-child {
+    width: 320px;
+  }
+
+  p:last-child {
+    width: 171px;
+    font-weight: 400;
+    margin-left: auto;
+  }
+
+  time {
+    width: 110px;
+    text-align: center;
+  }
+
+  .schedule__item-gym {
+    font-weight: 400;
+    width: 160px;
+    text-align: center;
+  }
+}
+
+.schedule__title + .schedule__list {
+  display: none;
+}
+
+.schedule__title--show {
+
+  svg {
+    transition: $trans--300;
+    right: 34px;
+    top: 17px;
+    transform: rotate(180deg);
+  }
+
+  & + .schedule__list {
+    transition: $trans--300;
+
+    display: block;
+  }
 }

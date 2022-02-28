@@ -2,3 +2,45 @@
   flex: 1 0 auto;
   overflow-x: clip;
 }
+
+.main__wrapper {
+  margin-top: 31px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 35px;
+
+  a {
+    color: $main-white;
+    @include font($montserrat, 13px, 16px, 300, normal);
+  }
+
+  h1,
+  p {
+    width: 606px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h1 {
+    @include font($montserrat, 30px, 37px, 800, normal);
+    color: $vivid-yellow;
+    padding-bottom: 17px;
+  }
+
+  p {
+    @include font($montserrat, 16px, 20px, 400, normal);
+    color: $main-white;
+    padding-bottom: 20px;
+
+    a {
+      @include font($montserrat, 16px, 20px, 400, normal);
+      color: $vivid-yellow;
+
+      &:hover,
+      &:focus-visible {
+        transition: $trans--300;
+        color: $main-white;
+      }
+    }
+  }
+}

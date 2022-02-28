@@ -38,21 +38,19 @@
     margin: 0;
     left: -2px;
     top: -11px;
-    // transform: rotate(180deg);
 
     &::after {
       position: absolute;
       left: 65px;
       content: "Назад";
       color: $main-white;
-      // transform: rotate(-180deg);
       @include font($montserrat, 13px, 16px, 300, normal)
     }
 
     &::before {
       content: "";
       position: absolute;
-      top: 25px;
+      top: 25.3px;
       right: 10px;
       width: 29px;
       height: 1px;
@@ -162,6 +160,44 @@
     &:focus-visible {
       border-color: $hover-btn;
       color: $footer-bcg;
+    }
+  }
+
+  &--buy {
+    @include font($montserrat, 16px, 20px, 500, normal);
+    border-radius: $btn-more-radius;
+    background-color: transparent;
+    color: $vivid-yellow;
+    border: 1px solid $vivid-yellow;
+    width: 185px;
+    min-height: 55px;
+    margin: 0;
+    margin-top: auto;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $hover-btn;
+      color: $footer-bcg;
+    }
+  }
+
+  &--promo {
+    @include font($montserrat, 20px, 24px, 400, normal);
+    border: none;
+    color: $vivid-yellow;
+    border-bottom: 1px solid $vivid-yellow;
+    border-radius: 0;
+    background-color: transparent;
+    margin-top: auto;
+    width: auto;
+    min-height: auto;
+
+    &:hover,
+    &:focus-visible {
+      transition: $trans--300;
+      background-color: transparent;
+      color: $hover-btn;
+      border-bottom: 1px solid transparent;
     }
   }
 }

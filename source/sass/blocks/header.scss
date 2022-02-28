@@ -4,6 +4,8 @@
   align-items: center;
   flex-flow: row wrap;
   min-height: 45px;
+  position: relative;
+  z-index: 5;
 }
 
 .header__nav-wrapper {
@@ -30,6 +32,13 @@
     color: $main-white;
     cursor: pointer;
   }
+
+  &--active {
+
+    a {
+      color: $vivid-yellow;
+    }
+  }
 }
 
 .header__tel {
@@ -38,7 +47,9 @@
 }
 
 .header__nav-item:hover a,
-.header__tel:hover {
+.header__tel:hover,
+.header__nav-item:focus-visible a,
+.header__tel:focus-visible {
   transition: $trans--300;
   color: $vivid-yellow;
 }

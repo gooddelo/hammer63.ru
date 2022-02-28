@@ -1,0 +1,28 @@
+.dance p,
+.dance__item {
+  @include font($montserrat, 16px, 20px, 400, normal);
+  color: $main-white;
+}
+
+.dance__wrapper {
+  width: 790px;
+  margin-bottom: 40px;
+}
+
+.dance__list {
+  padding-left: 25px;
+}
+
+.dance__item {
+  padding-bottom: 10px;
+}
+
+.dance__desc a {
+  color: $vivid-yellow;
+
+  &:hover,
+  &:focus-visible {
+    transition: $trans--300;
+    color: $main-white;
+  }
+}
