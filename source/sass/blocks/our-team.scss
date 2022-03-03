@@ -11,6 +11,19 @@
   margin-top: 33px;
   column-gap: 70px;
   row-gap: 35px;
+
+  @media (max-width: $tablet-width) {
+    column-gap: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+  }
+
+  @media (min-width: $min-width) and (max-width: 360px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .our-team__item {
@@ -19,6 +32,16 @@
   flex-direction: column;
   align-items: center;
   min-height: 480px;
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    width: 190px;
+    min-height: 265px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
 
   p {
     @include font($montserrat, 16px, 20px, 400, normal);
@@ -26,26 +49,54 @@
     margin: 0;
     text-align: center;
     padding: 0 10px;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(11px, 13px);
+      padding: 0;
+    }
   }
 
   img {
     margin-bottom: 21px;
+
+    @media (max-width: $tablet-width) {
+      width: 143px;
+      height: 159px;
+      margin-bottom: 8px;
+    }
   }
 }
 
 // MODAL
 
 .our-team__container {
-  width: 1140px;
-  margin: 0 auto;
+  width: calc(100% - 40px);
+  max-width: 1140px;
   height: max-content;
+  max-height: 654px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 24px;
+  }
 }
 
 .our-team__wrapper {
   display: flex;
-  width: 1040px;
+  max-width: 1040px;
+  width: calc(100% - 59px);
   margin: 0 auto;
-  padding: 59px 0;
+  padding: 59px 0 30px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding: 40px 0 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding-top: 10px;
+  }
 
   h2,
   h3,
@@ -59,6 +110,15 @@
   h2 {
     @include font($montserrat, 25px, 30px, 800, normal);
     padding-bottom: 21px;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(17px, 21px)
+    }
+
+    @media (max-width: $mobile-width) {
+      text-align: center;
+      padding-top: 10px;
+    }
   }
 
   p,
@@ -67,6 +127,14 @@
   cite {
     @include font($montserrat, 16px, 20px, 400, normal);
     padding-bottom: 3px;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(11px, 14px);
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 10px;
+    }
   }
 
   cite {
@@ -82,8 +150,24 @@
   blockquote {
     margin-left: 0;
   }
+
+  img {
+
+    @media (max-width: $tablet-width) {
+      width: 143px;
+      height: 159px;
+    }
+
+    @media (max-width: $mobile-width) {
+      align-self: center;
+    }
+  }
 }
 
 .our-team__content {
   margin-left: 39px;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+  }
 }

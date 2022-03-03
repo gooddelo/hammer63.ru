@@ -1,6 +1,6 @@
 .button {
   @include flex-center;
-  @include font($montserrat, 20px, 24px, 600, normal);
+  @include font($montserrat, 16px, 20px, 600, normal);
   cursor: pointer;
   border: none;
   appearance: none;
@@ -18,6 +18,10 @@
     background-color: $hover-btn;
   }
 
+  &--burger {
+    display: none;
+  }
+
   &--services {
     margin: 0;
     margin-left: 17px;
@@ -25,7 +29,6 @@
 
   &--team {
     margin-top: 58px;
-    margin-bottom: 30px;
   }
 
   &--back {
@@ -116,8 +119,8 @@
     min-height: 50px;
     background-color: transparent;
     margin: 0;
-    left: 95.3%;
-    top: 0;
+    left: 94%;
+    top: 1%;
 
     &::after,
     &::before {
@@ -198,6 +201,217 @@
       background-color: transparent;
       color: $hover-btn;
       border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .button {
+    margin-top: 38px;
+    width: 319px;
+    min-height: 60px;
+    @include resize-txt(14px, 17px);
+
+    &--schedule {
+      margin: 0 auto 30px;
+    }
+
+    &--promo {
+      width: auto;
+      min-height: auto;
+      margin-top: auto;
+    }
+
+    &--buy {
+      width: 207px;
+      min-height: 45px;
+      margin: auto 0 0;
+    }
+
+    &--services {
+      margin-top: 0;
+    }
+
+    &--team {
+      margin: 55px auto 0;
+    }
+
+    &--more {
+      width: 121px;
+      min-height: 38px;
+      margin-top: auto;
+    }
+
+    &--close {
+      animation: bounce .6s;
+      z-index: 40;
+      width: 50px;
+      min-height: 50px;
+      left: 93%;
+      margin: 0;
+    }
+
+    &--back {
+      width: 52px;
+      min-height: 52px;
+      margin: 0;
+
+      &::after {
+        content: "";
+      }
+
+      &::before {
+        top: 25.4px;
+      }
+    }
+
+    &--burger {
+      display: block;
+      position: absolute;
+      background-color: transparent;
+      margin: 0;
+      width: 52px;
+      min-height: 27px;
+      top: 17px;
+      right: 33px;
+
+      &::after,
+      & span::after,
+      & span::before {
+        position: absolute;
+        content: "";
+        height: 7px;
+        width: 100%;
+        background-color: $main-white;
+        left: 0;
+        bottom: 0;
+      }
+
+      & span::after {
+        top: 10px;
+      }
+
+      & span::before {
+        top: 1px;
+      }
+
+      &:hover,
+      &:focus-visible {
+        background-color: transparent;
+
+        &::after,
+        & span::after,
+        & span::before {
+          transition: $trans--300;
+
+        }
+
+        & span::before {
+          transform: translateY(10px);
+        }
+
+        &::after {
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .button {
+    width: 100%;
+    max-width: 353px;
+    min-height: 60px;
+    margin-top: 19px;
+
+    &--more {
+      width: 121px;
+      min-height: 38px;
+      margin-top: auto;
+    }
+
+    &--promo {
+      width: auto;
+      min-height: auto;
+      margin-top: auto;
+    }
+
+    &--buy {
+      width: 207px;
+      min-height: 45px;
+      margin: auto 0 0;
+    }
+
+    &--back {
+      display: none;
+      width: 40px;
+      min-height: 40px;
+      margin: 0;
+
+      &::before {
+        top: 50%;
+        left: 8px;
+        width: 23px;
+      }
+
+      & span::after,
+      & span::before {
+        right: 26px;
+      }
+
+      & span::after {
+        top: 18px;
+      }
+
+      & span::before {
+        top: 21px;
+      }
+    }
+
+    &--team {
+      margin-top: 30px;
+    }
+
+    &--services {
+      margin: 31px auto 0;
+    }
+
+    &--close {
+      width: 50px;
+      min-height: 50px;
+      margin: 0;
+      left: calc(100% - 50px);
+    }
+
+    &--burger {
+      width: 33px;
+      min-height: 20px;
+      top: 16px;
+      right: 12px;
+      margin-top: 0;
+
+      &::after,
+      & span::after,
+      & span::before {
+        height: 4.5px;
+      }
+
+      & span::after {
+        top: 8px;
+      }
+
+      &:hover,
+      &:focus-visible {
+
+        & span::before {
+          transform: translateY(8px);
+        }
+
+        &::after {
+          transform: translateY(-8px);
+        }
+      }
     }
   }
 }

@@ -20,7 +20,9 @@
 <body class="page__body">
   <header class="header container">
     <a href="index.html" class="header__logo">
-      <img loading="lazy" src="img/icon/logo.png" width="87" height="42" alt="Логотип">
+      <svg width="87" height="42" role="img">
+        <use xlink:href="img/sprite.svg#icon-logo"></use>
+      </svg>
     </a>
     <nav class="header__nav">
       <div class="header__nav-wrapper">
@@ -41,6 +43,7 @@
             <a href="#contact">Контакты</a>
           </li>
         </ul>
+        <button class="button button--burger" type="button"><span></span></button>
         <a class="header__tel" href="tel:+79297005323">8 (929) 700-53-23</a>
       </div>
     </nav>
@@ -56,7 +59,7 @@
         </p>
       </div>
     </section>
-    <section class="schedule__container accordion container">
+    <section class="schedule__container accordion">
       <div class="schedule__inner">
         <div class="schedule__title">
           <svg width="38" height="26" role="img">
@@ -69,25 +72,25 @@
             <p>Чир Спорт (с помпонами)</p>
             <time>18:00-19:30</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Софья</p>
+            <p class="schedule__item-coach">тренер Софья</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>Взрослая группа <br>(новые и основные ученики)</p>
             <time>18:15-19:45</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренера: Леонид, Валерия</p>
+            <p class="schedule__item-coach">тренера: Леонид, Валерия</p>
           </li>
           <li class="schedule__item">
             <p>Зумба</p>
             <time>20:00-21:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Леонид</p>
+            <p class="schedule__item-coach">тренер Леонид</p>
           </li>
           <li class="schedule__item">
             <p>Кардиотренировки</p>
             <time>21:00-22:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Софья</p>
+            <p class="schedule__item-coach">тренер Софья</p>
           </li>
         </ul>
         <div class="schedule__title">
@@ -101,55 +104,55 @@
             <p>Аэростретчинг (на полотнах)</p>
             <time>17:00-18:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>Дети с 3х лет и старше <br>(новые и основные ученики)</p>
             <time>17:00-18:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Классика , стретчинг <br>Дети с 3х лет и старше</p>
             <time>18:00-19:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и  Европейские танцы <br>Младшая основная группа <br>(новые и основные ученики)</p>
             <time>18:00-19:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренера: Леонид, Анна, Софья</p>
+            <p class="schedule__item-coach">тренера: Анна, Леонид, Софья</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>(новые и основные ученики) <br>Дети с 3х лет и старше</p>
             <time>19:00-20:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренера: Анна, Леонид, Софья</p>
+            <p class="schedule__item-coach">тренера: Анна, Леонид, Софья</p>
           </li>
           <li class="schedule__item">
             <p>Модерн , классика , стретчинг <br>(все возраста и уровни)</p>
             <time>19:00-20:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>Старшая группа <br>(основные ученики)</p>
             <time>20:00-21:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Анна</p>
+            <p class="schedule__item-coach">тренер Анна</p>
           </li>
           <li class="schedule__item">
             <p>Stretching (взрослая группа)</p>
             <time>20:00-21:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>Старшая группа <br>(основные ученики)</p>
             <time>21:00-22:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Анна</p>
+            <p class="schedule__item-coach">тренер Анна</p>
           </li>
         </ul>
         <div class="schedule__title">
@@ -163,25 +166,25 @@
             <p>Чир Спорт (с помпонами)</p>
             <time>18:00-19:30</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Софья</p>
+            <p class="schedule__item-coach">тренер Софья</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>Взрослая группа <br>(новые и основные ученики)</p>
             <time>18:15-19:45</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренера: Леонид, Валерия</p>
+            <p class="schedule__item-coach">тренера: Леонид, Валерия</p>
           </li>
           <li class="schedule__item">
             <p>Зумба</p>
             <time>20:00-21:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Леонид</p>
+            <p class="schedule__item-coach">тренер Леонид</p>
           </li>
           <li class="schedule__item">
             <p>Кардиотренировки</p>
             <time>21:00-22:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Софья</p>
+            <p class="schedule__item-coach">тренер Софья</p>
           </li>
         </ul>
         <div class="schedule__title">
@@ -195,55 +198,55 @@
             <p>Латиноамериканские и Европейские танцы <br>Дети с 3х лет и старше <br>(новые и основные ученики)</p>
             <time>17:00-18:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренера: Леонид, Анна, Софья</p>
+            <p class="schedule__item-coach">тренера: Анна, Леонид, Софья</p>
           </li>
           <li class="schedule__item">
             <p>Аэростретчинг (на полотнах)</p>
             <time>17:00-18:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Классика , стретчинг <br>Дети с 3х лет и старше</p>
             <time>18:00-19:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и  Европейские танцы <br>Младшая основная группа <br>(новые и основные ученики)</p>
             <time>18:00-19:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренера: Леонид, Анна, Софья</p>
+            <p class="schedule__item-coach">тренера: Анна, Леонид, Софья</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>(новые и основные ученики) <br>Дети с 3х лет и старше</p>
             <time>19:00-20:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренера: Анна, Леонид, Софья</p>
+            <p class="schedule__item-coach">тренера: Анна, Леонид, Софья</p>
           </li>
           <li class="schedule__item">
             <p>Модерн , классика , стретчинг <br>(все возраста и уровни)</p>
             <time>19:00-20:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Stretching (взрослая группа)</p>
             <time>19:00-20:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>Старшая группа <br>(основные ученики)</p>
             <time>20:00-21:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Анна</p>
+            <p class="schedule__item-coach">тренер Анна</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>Старшая группа <br>(основные ученики)</p>
             <time>21:00-22:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренер Анна</p>
+            <p class="schedule__item-coach">тренер Анна</p>
           </li>
         </ul>
         <div class="schedule__title">
@@ -257,37 +260,37 @@
             <p>ПРАКТИКА <br>Латиноамериканские и Европейские танцы <br>Младшая группа <br>Все возраста и уровни</p>
             <time>18:00-19:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренера: Леонид, Анна, Софья</p>
+            <p class="schedule__item-coach">тренера: Анна, Леонид, Софья</p>
           </li>
           <li class="schedule__item">
             <p>Латиноамериканские и Европейские танцы <br>Дети с 3х лет и старше<br>Новенькие</p>
             <time>18:00-19:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер: Софья</p>
+            <p class="schedule__item-coach">тренер: Софья</p>
           </li>
           <li class="schedule__item">
             <p>ОФП <br>(все возраста) новые и старые ученики</p>
             <time>19:00-20:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренера: Леонид, Анна, Софья</p>
+            <p class="schedule__item-coach">тренера: Анна, Леонид, Софья</p>
           </li>
           <li class="schedule__item">
             <p>Аэростретчинг (на полотнах)</p>
             <time>19:00-20:00</time>
             <p class="schedule__item-gym">Малый зал</p>
-            <p>тренер Алена</p>
+            <p class="schedule__item-coach">тренер Алена</p>
           </li>
           <li class="schedule__item">
             <p>ПРАКТИКА <br>Латиноамериканские и Европейские танцы <br>(основные ученики) <br>Старшая группа</p>
             <time>20:00-21:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренера: Леонид, Анна</p>
+            <p class="schedule__item-coach">тренера: Леонид, Анна</p>
           </li>
           <li class="schedule__item">
             <p>ПРАКТИКА <br>Латиноамериканские и Европейские танцы <br>(основные ученики) <br>Старшая группа</p>
             <time>21:00-22:00</time>
             <p class="schedule__item-gym">Большой зал</p>
-            <p>тренера: Леонид, Анна</p>
+            <p class="schedule__item-coach">тренера: Леонид, Анна</p>
           </li>
         </ul>
       </div>
@@ -317,25 +320,33 @@
           <a href="tel:+79297005323">8 (929) 700-53-23</a>
         </div>
         <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a href="#">
-              <img loading="lazy" src="img/img-inst.png" width="45" height="45" alt="Ссылка на инстаграмм">
+          <li class="footer__social-item footer__social-item--inst">
+            <a href="https://www.instagram.com/hammer63ru/">
+              <svg width="45" height="45" role="img">
+                <use xlink:href="img/sprite.svg#icon-inst"></use>
+              </svg>
             </a>
           </li>
-          <li class="footer__social-item">
-            <a href="#">
-              <img loading="lazy" src="img/img-vk.png" width="45" height="45" alt="Ссылка на вконтакте">
+          <li class="footer__social-item footer__social-item--vk">
+            <a href="https://vk.com/hammersamara">
+              <svg width="26" height="15" role="img">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
             </a>
           </li>
-          <li class="footer__social-item">
-            <a href="#">
-              <img loading="lazy" src="img/img-tg.png" width="45" height="45" alt="Ссылка на телеграмм">
+          <li class="footer__social-item footer__social-item--tg">
+            <a href="https://t.me/Hammer_admin_revol">
+              <svg width="26" height="26" role="img">
+                <use xlink:href="img/sprite.svg#icon-tg"></use>
+              </svg>
             </a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
+  <div class="overlay overlay--hidden"></div>
+  <script type="module" src="js/main.js"></script>
   <script src="js/accordion.js"></script>
 </body>
 

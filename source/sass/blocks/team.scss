@@ -7,17 +7,36 @@
   &::after {
     content: url("../img/overlay-bcg.png");
     position: absolute;
-    bottom: -175px;
+    bottom: -213px;
     left: -150px;
+
+    @media (max-width: $tablet-width) {
+      bottom: calc(100% - 1000px);
+      left: -161px;
+    }
+
+    @media (max-width: $mobile-width) {
+      bottom: calc(100% - 700px);
+      left: -28px;
+    }
   }
 }
 
 .team__about {
-  width: 588px;
-  margin-top: 202px;
-  margin-left: 71px;
+  width: calc(100% - 567px);
+  margin: 202px 0 30px 71px;
   position: relative;
   z-index: 10;
+
+  @media (max-width: $tablet-width) {
+    width: 720px;
+    text-align: center;
+    margin: 614px auto 99px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 419px;
+  }
 
   h2,
   p {
@@ -29,12 +48,27 @@
   h2 {
     @include font($montserrat, 30px, 37px, 800, normal);
     padding-bottom: 50px;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(22px, 27px);
+      padding-bottom: 35px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 32px;
+    }
   }
 
   p {
     @include font($montserrat, 16px, 20px, 400, normal);
     padding-bottom: 5px;
     letter-spacing: 0.83px;
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(14px, 19px);
+      letter-spacing: 0.6px;
+      text-align: left;
+    }
   }
 }
 
@@ -43,9 +77,29 @@
   width: 586px;
   right: -53px;
 
+  @media (max-width: $tablet-width) {
+    left: 50%;
+    transform: translateX(-51%);
+    top: -47px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: -59px;
+  }
+
   img {
     position: absolute;
     top: 137px;
     left: 7px;
+
+    @media (max-width: $tablet-width) {
+      left: 32px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 320px;
+      height: 364px;
+      left: 139px;
+    }
   }
 }

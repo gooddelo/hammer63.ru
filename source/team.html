@@ -13,13 +13,14 @@
   <link rel="prefetch" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="prefetch" href="fonts/notosans.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <script defer type="module" src="js/main.js"></script>
   <title>Hammer. Наша команда</title>
 </head>
 <body class="page__body">
   <header class="header container">
     <a href="index.html" class="header__logo">
-      <img loading="lazy" src="img/icon/logo.png" width="87" height="42" alt="Логотип">
+      <svg width="87" height="42" role="img">
+        <use xlink:href="img/sprite.svg#icon-logo"></use>
+      </svg>
     </a>
     <nav class="header__nav">
       <div class="header__nav-wrapper">
@@ -40,6 +41,7 @@
             <a href="#contact">Контакты</a>
           </li>
         </ul>
+        <button class="button button--burger" type="button"><span></span></button>
         <a class="header__tel" href="tel:+79297005323">8 (929) 700-53-23</a>
       </div>
     </nav>
@@ -338,19 +340,25 @@
           <a href="tel:+79297005323">8 (929) 700-53-23</a>
         </div>
         <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a href="#">
-              <img loading="lazy" src="img/img-inst.png" width="45" height="45" alt="Ссылка на инстаграмм">
+          <li class="footer__social-item footer__social-item--inst">
+            <a href="https://www.instagram.com/hammer63ru/">
+              <svg width="45" height="45" role="img">
+                <use xlink:href="img/sprite.svg#icon-inst"></use>
+              </svg>
             </a>
           </li>
-          <li class="footer__social-item">
-            <a href="#">
-              <img loading="lazy" src="img/img-vk.png" width="45" height="45" alt="Ссылка на вконтакте">
+          <li class="footer__social-item footer__social-item--vk">
+            <a href="https://vk.com/hammersamara">
+              <svg width="26" height="15" role="img">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
             </a>
           </li>
-          <li class="footer__social-item">
-            <a href="#">
-              <img loading="lazy" src="img/img-tg.png" width="45" height="45" alt="Ссылка на телеграмм">
+          <li class="footer__social-item footer__social-item--tg">
+            <a href="https://t.me/Hammer_admin_revol">
+              <svg width="26" height="26" role="img">
+                <use xlink:href="img/sprite.svg#icon-tg"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -369,5 +377,6 @@
       </div>
     </section>
   </template>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

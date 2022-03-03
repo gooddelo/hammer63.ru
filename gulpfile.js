@@ -54,7 +54,13 @@ gulp.task("images", function() {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
+      imagemin.svgo({
+        plugins: [
+          {
+            removeViewBox: false,
+          }
+        ]
+      })
     ]))
 
     .pipe(gulp.dest("source/img"));
@@ -68,7 +74,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/{icon-*,htmlacademy*}.svg")
+  return gulp.src("source/img/{icon-*,}.svg")
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));

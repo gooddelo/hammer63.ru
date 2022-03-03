@@ -1,18 +1,44 @@
 .intro {
   position: relative;
-  height: 802px;
+  min-height: 802px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 498px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 368px;
+  }
 
   &::after {
     content: url("../img/overlay-bcg.png");
     position: absolute;
     z-index: 2;
     right: -593px;
-    top: -146px;
+    top: -172px;
+
+    @media (max-width: $tablet-width) {
+      right: -849px;
+      top: -390px;
+    }
+
+    @media (max-width: $mobile-width) {
+      right: -793px;
+      top: -921px;
+    }
   }
 }
 
 .intro__wrapper {
   margin-top: 88px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 341px;
+  }
 }
 
 .intro__desc,
@@ -24,17 +50,44 @@
 .intro__desc {
   @include font($montserrat, 20px, 24px, 400, normal);
   padding-top: 10px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .intro__offer {
   @include font($montserrat, 36px, 44px, 700, normal);
   padding-top: 68px;
+
+  @media (max-width: $tablet-width) {
+    @include resize-txt(30px, 37px);
+    padding-top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include resize-txt(24px, 29px);
+  }
 }
 
 .intro__content {
   width: 570px;
   position: relative;
   z-index: 12;
+
+  @media (max-width: $tablet-width) {
+    width: 339px;
+
+    img {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    max-width: 353px;
+    margin: 0 auto;
+  }
 }
 
 .intro__img {
@@ -42,12 +95,26 @@
   top: -557px;
   right: -491px;
   z-index: -1;
+
+  img {
+    object-fit: cover;
+  }
 }
 
 .intro__list {
   display: flex;
   @include reset-list;
   margin-top: 23px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 15px;
+    margin-left: 8px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+    justify-content: center;
+  }
 }
 
 .intro__item {
@@ -58,17 +125,28 @@
     margin-right: 36px;
   }
 
+  @media (max-width: $tablet-width) {
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
   a {
     @include font($noto, 12px, 16px, 400, normal);
     color: $main-white;
     margin: 0;
     padding-left: 3px;
     cursor: pointer;
-  }
 
-  &:hover a,
-  &:focus-visible a {
-    transition: $trans--300;
-    color: $vivid-yellow;
+    @media (max-width: $tablet-width) {
+      padding-left: 9px;
+      @include resize-txt(11px, 15px);
+    }
   }
 }

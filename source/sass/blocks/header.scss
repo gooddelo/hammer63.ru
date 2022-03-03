@@ -5,7 +5,36 @@
   flex-flow: row wrap;
   min-height: 45px;
   position: relative;
-  z-index: 5;
+  z-index: 35;
+
+  @media (max-width: $tablet-width) {
+    min-height: 63px;
+  }
+}
+
+.header__logo {
+
+  svg {
+
+    @media (max-width: $tablet-width) {
+      position: absolute;
+      top: -6px;
+      width: 149px;
+      height: 72px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 116px;
+      height: 56px;
+      top: -9px;
+      left: 8px;
+    }
+  }
+}
+
+.header__nav,
+.header__nav-list {
+  flex-grow: 1;
 }
 
 .header__nav-wrapper {
@@ -16,9 +45,44 @@
   @include reset-list;
   display: flex;
   flex-flow: row wrap;
-  width: 737px;
-  margin-left: 147px;
-  margin-right: 55px;
+  justify-content: center;
+  margin-left: 29px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__nav--show {
+
+  .header__nav-list {
+    display: flex;
+    align-items: center;
+    animation: bounce .6s;
+    flex-flow: column wrap;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    background-color: $footer-bcg;
+    position: absolute;
+    z-index: 40;
+  }
+
+  .header__nav-item {
+    margin-right: 0;
+    width: 50%;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #9b9997;
+    }
+
+    a {
+      min-height: 50px;
+      @include flex-center;
+    }
+  }
 }
 
 .header__nav-item {
@@ -44,6 +108,20 @@
 .header__tel {
   @include font($montserrat, 13px, 16px, 400, normal);
   color: $main-white;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 123px;
+    margin-left: auto;
+    letter-spacing: 0.4px;
+  }
+
+  @media (max-width: $mobile-width) {
+    z-index: 5;
+    margin-left: 5px;
+    margin-top: 18px;
+    letter-spacing: -0.1px;
+    @include resize-txt(11px, 13px);
+  }
 }
 
 .header__nav-item:hover a,

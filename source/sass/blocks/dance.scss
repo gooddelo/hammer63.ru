@@ -2,11 +2,19 @@
 .dance__item {
   @include font($montserrat, 16px, 20px, 400, normal);
   color: $main-white;
+
+  @media (max-width: $tablet-width) {
+    @include resize-txt(14px, 19px);
+  }
 }
 
 .dance__wrapper {
   width: 790px;
   margin-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .dance__list {
@@ -15,6 +23,10 @@
 
 .dance__item {
   padding-bottom: 10px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 5px;
+  }
 }
 
 .dance__desc a {

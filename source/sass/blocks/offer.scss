@@ -8,6 +8,13 @@
   align-items: center;
   padding: 42px 23px 54px;
 
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    max-width: 720px;
+    min-height: 139px;
+    padding: 16px 22px;
+  }
+
   h2,
   p {
     margin: 0;
@@ -17,6 +24,12 @@
     @include font($montserrat, 36px, 44px, 800, normal);
     color: $vivid-yellow;
     padding-bottom: 20px;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(24px, 29px);
+      padding-bottom: 10px;
+      text-align: center;
+    }
   }
 
   p {
@@ -24,5 +37,13 @@
     color: $main-white;
     text-align: center;
     padding-bottom: 17px;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(18px, 22px);
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 10px;
+    }
   }
 }
