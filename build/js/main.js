@@ -1,6 +1,8 @@
 import { team } from "./team.js";
 
 const KEYCODE_TAB = 9;
+const overlay = document.querySelector('.overlay');
+const body = document.querySelector('.page__body');
 
 function trapFocus(element) {
   let focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
@@ -77,12 +79,42 @@ for (let i = 0; i < anchors.length; i++) {
   }, false);
 }
 
+// Menu
+
+const btnOpenMenu = body.querySelector('.button--burger');
+const headerMenu = body.querySelector('.header__nav');
+const menuItems = headerMenu.querySelectorAll('.header__nav-item');
+
+function showMenu(btn, menu) {
+  btn.classList.remove('button--burger');
+  btn.classList.add('button--close');
+  menu.classList.add('header__nav--show');
+  setOverlayVisible(overlay);
+}
+
+function hideMenu(btn, menu) {
+  btn.classList.add('button--burger');
+  btn.classList.remove('button--close');
+  menu.classList.remove('header__nav--show');
+  setOverlayHide(overlay);
+}
+
+for (let menuItem of menuItems) {
+  menuItem.addEventListener('click', () => hideMenu(btnOpenMenu, headerMenu), {once: true}); // Закрываем меню по клику на элементы
+}
+
+btnOpenMenu.addEventListener('click', () => {
+  if (btnOpenMenu.classList.contains('button--burger')) {
+    showMenu(btnOpenMenu, headerMenu);
+  } else {
+    hideMenu(btnOpenMenu, headerMenu);
+  }
+})
+
 // Popup
 
 const modalTemplate = document.querySelector('#modal-template');
-const overlay = document.querySelector('.overlay');
-const body = document.querySelector('.page__body');
-const btnOpenPopup = document.querySelectorAll('#buttonPopup');
+const btnsOpenPopup = document.querySelectorAll('#buttonPopup');
 
 const closePopup = (popup) => {
   popup.remove();
@@ -121,19 +153,32 @@ function showPopup(id, data) {
   }
 }
 
-for (let btn of btnOpenPopup) {
-  btn.addEventListener('click', () => {
-    showPopup(btn.dataset.popupid, team[btn.dataset.persona])
+for (let btnOpenPopup of btnsOpenPopup) {
+  btnOpenPopup.addEventListener('click', () => {
+    showPopup(btnOpenPopup.dataset.popupid, team[btnOpenPopup.dataset.persona])
   });
 }
 
 const swiper = new Swiper('.swiper', {
-  slidesPerView: 3,
-  slidesPerGroup: 1,
-  spaceBetween: 31,
-  // loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      // slidesPerGroup: 1,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 23,
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      spaceBetween: 31,
+    }
+  }
 });
