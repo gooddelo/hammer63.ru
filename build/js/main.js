@@ -1,40 +1,41 @@
 import { team } from "./team.js";
+import { openMenu, btnOpenMenu } from "./menu.js";
+// import "./util.js";
 
-const KEYCODE_TAB = 9;
-const overlay = document.querySelector('.overlay');
-const body = document.querySelector('.page__body');
-const main = body.querySelector('main');
+// const btnOpenMenu = body.querySelector('.button--burger');
+// const headerMenu = body.querySelector('.header__nav');
+// const menuItems = headerMenu.querySelectorAll('.header__nav-item');
 // const mediaQuery = window.matchMedia('(max-width: 1023px)');
 
 // console.log(mediaQuery);
 
-function trapFocus(element) {
-  let focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
-  let firstFocusableEl = focusableEls[0];
-  let lastFocusableEl = focusableEls[focusableEls.length - 1];
+// function trapFocus(element) {
+//   let focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+//   let firstFocusableEl = focusableEls[0];
+//   let lastFocusableEl = focusableEls[focusableEls.length - 1];
 
-  element.addEventListener('keydown', function(e) {
-    let isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+//   element.addEventListener('keydown', function(e) {
+//     let isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
 
-    if (!isTabPressed) {
-      return;
-    }
+//     if (!isTabPressed) {
+//       return;
+//     }
 
-    if ( e.shiftKey ) /* shift + tab */ {
-      if (document.activeElement === firstFocusableEl) {
-        lastFocusableEl.focus();
-          e.preventDefault();
-        }
-      } else /* tab */ {
-      if (document.activeElement === lastFocusableEl) {
-        firstFocusableEl.focus();
-          e.preventDefault();
-        }
-      }
-  });
-}
+//     if ( e.shiftKey ) /* shift + tab */ {
+//       if (document.activeElement === firstFocusableEl) {
+//         lastFocusableEl.focus();
+//           e.preventDefault();
+//         }
+//       } else /* tab */ {
+//       if (document.activeElement === lastFocusableEl) {
+//         firstFocusableEl.focus();
+//           e.preventDefault();
+//         }
+//       }
+//   });
+// }
 
-const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
+// const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
 // function setOverlay(overlay) {
 //   if (overlay.classList.contains('overlay--hidden') && mediaQuery) {
@@ -48,17 +49,17 @@ const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 //   }
 // }
 
-function setOverlayVisible(overlay) {
-  body.style.overflow = 'hidden';
-  main.style.filter = 'blur(3px)';
-  overlay.classList.remove('overlay--hidden');
-}
+// function setOverlayVisible(overlay) {
+//   body.style.overflow = 'hidden';
+//   main.style.filter = 'blur(3px)';
+//   overlay.classList.remove('overlay--hidden');
+// }
 
-function setOverlayHide(overlay) {
-  body.style.overflow = '';
-  main.style.filter = '';
-  overlay.classList.add('overlay--hidden');
-}
+// function setOverlayHide(overlay) {
+//   body.style.overflow = '';
+//   main.style.filter = '';
+//   overlay.classList.add('overlay--hidden');
+// }
 
 function smoothScroll(hash) {
   const scrollTo = window.pageYOffset;
@@ -97,37 +98,39 @@ for (let i = 0; i < anchors.length; i++) {
   }, false);
 }
 
-// Menu
+// // Menu
 
-const btnOpenMenu = body.querySelector('.button--burger');
-const headerMenu = body.querySelector('.header__nav');
-const menuItems = headerMenu.querySelectorAll('.header__nav-item');
+// const btnOpenMenu = body.querySelector('.button--burger');
+// const headerMenu = body.querySelector('.header__nav');
+// const menuItems = headerMenu.querySelectorAll('.header__nav-item');
 
-function showMenu(btn, menu) {
-  btn.classList.remove('button--burger');
-  btn.classList.add('button--close');
-  menu.classList.add('header__nav--show');
-  setOverlayVisible(overlay);
-}
+// function showMenu(btn, menu) {
+//   btn.classList.remove('button--burger');
+//   btn.classList.add('button--close');
+//   menu.classList.add('header__nav--show');
+//   setOverlayVisible(overlay);
+// }
 
-function hideMenu(btn, menu) {
-  btn.classList.add('button--burger');
-  btn.classList.remove('button--close');
-  menu.classList.remove('header__nav--show');
-  setOverlayHide(overlay);
-}
+// function hideMenu(btn, menu) {
+//   btn.classList.add('button--burger');
+//   btn.classList.remove('button--close');
+//   menu.classList.remove('header__nav--show');
+//   setOverlayHide(overlay);
+// }
 
-for (let menuItem of menuItems) {
-  menuItem.addEventListener('click', () => hideMenu(btnOpenMenu, headerMenu)); // Закрываем меню по клику на элементы
-}
+// for (let menuItem of menuItems) {
+//   menuItem.addEventListener('click', () => hideMenu(btnOpenMenu, headerMenu)); // Закрываем меню по клику на элементы
+// }
 
-btnOpenMenu.addEventListener('click', () => {
-  if (btnOpenMenu.classList.contains('button--burger')) {
-    showMenu(btnOpenMenu, headerMenu);
-  } else {
-    hideMenu(btnOpenMenu, headerMenu);
-  }
-})
+// btnOpenMenu.addEventListener('click', () => {
+//   if (btnOpenMenu.classList.contains('button--burger')) {
+//     showMenu(btnOpenMenu, headerMenu);
+//   } else {
+//     hideMenu(btnOpenMenu, headerMenu);
+//   }
+// })
+
+btnOpenMenu.addEventListener('click', openMenu);
 
 // Popup
 
