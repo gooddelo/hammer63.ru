@@ -115,7 +115,8 @@
   }
 
   &--inst {
-    background: linear-gradient(45deg, rgba(223,153,61,1) 10%, rgba(195,39,106,1) 60%, rgba(112,36,196,1) 100%);
+    background: -webkit-gradient(linear, left bottom, color-stop(10%, #df993d), color-stop(60%, #c3276a), color-stop(100%, #7024c4));;
+    background: linear-gradient(45deg, #df993d 10%, #c3276a 60%, #7024c4 100%);
   }
 
   &--vk {

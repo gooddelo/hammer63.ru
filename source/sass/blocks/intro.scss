@@ -10,23 +10,23 @@
     min-height: 368px;
   }
 
-  &::after {
-    content: url("../img/overlay-bcg.png");
-    position: absolute;
-    z-index: 2;
-    right: -593px;
-    top: -172px;
+  // &::after {
+  //   content: url("../img/overlay-bcg.png");
+  //   position: absolute;
+  //   z-index: 2;
+  //   right: -593px;
+  //   top: -172px;
 
-    @media (max-width: $tablet-width) {
-      right: -849px;
-      top: -390px;
-    }
+  //   @media (max-width: $tablet-width) {
+  //     right: -849px;
+  //     top: -390px;
+  //   }
 
-    @media (max-width: $mobile-width) {
-      right: -793px;
-      top: -921px;
-    }
-  }
+  //   @media (max-width: $mobile-width) {
+  //     right: -793px;
+  //     top: -921px;
+  //   }
+  // }
 }
 
 .intro__wrapper {
@@ -90,16 +90,16 @@
   }
 }
 
-.intro__img {
-  position: absolute;
-  top: -557px;
-  right: -491px;
-  z-index: -1;
+// .intro__img {
+//   position: absolute;
+//   top: -557px;
+//   right: -491px;
+//   z-index: -1;
 
-  img {
-    object-fit: cover;
-  }
-}
+//   img {
+//     object-fit: cover;
+//   }
+// }
 
 .intro__list {
   display: flex;

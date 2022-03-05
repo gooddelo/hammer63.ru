@@ -3,6 +3,10 @@ import { team } from "./team.js";
 const KEYCODE_TAB = 9;
 const overlay = document.querySelector('.overlay');
 const body = document.querySelector('.page__body');
+const main = body.querySelector('main');
+// const mediaQuery = window.matchMedia('(max-width: 1023px)');
+
+// console.log(mediaQuery);
 
 function trapFocus(element) {
   let focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
@@ -32,13 +36,27 @@ function trapFocus(element) {
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
+// function setOverlay(overlay) {
+//   if (overlay.classList.contains('overlay--hidden') && mediaQuery) {
+//     body.style.overflow = 'hidden';
+//     main.style.filter = 'blur(3px)';
+//     overlay.classList.remove('overlay--hidden');
+//   } else {
+//     body.style.overflow = '';
+//     main.style.filter = '';
+//     overlay.classList.add('overlay--hidden');
+//   }
+// }
+
 function setOverlayVisible(overlay) {
   body.style.overflow = 'hidden';
+  main.style.filter = 'blur(3px)';
   overlay.classList.remove('overlay--hidden');
 }
 
 function setOverlayHide(overlay) {
   body.style.overflow = '';
+  main.style.filter = '';
   overlay.classList.add('overlay--hidden');
 }
 
@@ -100,7 +118,7 @@ function hideMenu(btn, menu) {
 }
 
 for (let menuItem of menuItems) {
-  menuItem.addEventListener('click', () => hideMenu(btnOpenMenu, headerMenu), {once: true}); // Закрываем меню по клику на элементы
+  menuItem.addEventListener('click', () => hideMenu(btnOpenMenu, headerMenu)); // Закрываем меню по клику на элементы
 }
 
 btnOpenMenu.addEventListener('click', () => {
@@ -114,7 +132,7 @@ btnOpenMenu.addEventListener('click', () => {
 // Popup
 
 const modalTemplate = document.querySelector('#modal-template');
-const btnsOpenPopup = document.querySelectorAll('#buttonPopup');
+const btnsOpenPopup = document.querySelectorAll('[name=buttonPopup]');
 
 const closePopup = (popup) => {
   popup.remove();

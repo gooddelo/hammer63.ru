@@ -9,6 +9,12 @@
   align-items: center;
   padding: 44px 69px;
 
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+
   h2 {
     @include font($montserrat, 20px, 24px, 800, normal);
     color: $main-white;
@@ -20,7 +26,8 @@
 }
 
 .schedule__wrapper {
-  width: 380px;
+  max-width: 380px;
+  width: calc(100% - 48px);
   margin: 0 auto;
 }
 
@@ -208,7 +215,6 @@
 
   & + .schedule__list {
     transition: $trans--300;
-
     display: block;
   }
 }

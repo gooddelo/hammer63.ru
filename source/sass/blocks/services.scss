@@ -1,11 +1,18 @@
 .services {
   position: relative;
   min-height: 837px;
-  overflow-y: clip;
-  z-index: 10;
+  border-radius: 100% 100% 55% 55%/50% 50% 100% 100%;
+  background: linear-gradient(0deg, #242222 50%, #432445 100%);
+  // overflow-x: clip;
+  // z-index: 10;
 
   @media (max-width: $tablet-width) {
+    border-radius: 66% 66% 55% 55%/30% 30% 100% 100%;
     min-height: 656px;
+  }
+
+  @media (max-width: $mobile-width) {
+    border-radius: 80% 80% 55% 55%/15% 15% 100% 100%;
   }
 
   h2 {
@@ -22,25 +29,25 @@
     }
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    width: 4032px;
-    height: 3975px;
-    border-radius: 50%;
-    background: linear-gradient(0deg, #242222 80%, #432445 94%);
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -10;
+  //   width: 4032px;
+  //   height: 3975px;
+  //   border-radius: 50%;
+  //
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   top: 0;
 
-    @media (max-width: $tablet-width) {
-      width: 1831px;
-      height: 2023px;
-      // left: 52.5%;
-      // transform: translateX(-50%);
-    }
-  }
+  //   @media (max-width: $tablet-width) {
+  //     width: 1831px;
+  //     height: 2023px;
+  //     // left: 52.5%;
+  //     // transform: translateX(-50%);
+  //   }
+  // }
 }
 
 .services__wrapper {
@@ -173,6 +180,10 @@
   &:hover svg,
   &:focus-visible svg {
     fill: #c7e80a;
+
+    @media (max-width: $tablet-width) {
+      fill: none;
+    }
   }
 
   &--prev,
@@ -189,7 +200,7 @@
   }
 
   &--prev {
-    left: 30px;
+    left: calc((100vw - 1075px) / 2);
 
     @media (min-width: $desktop-width) and (max-width: 1100px) {
       left: 10px;
@@ -209,7 +220,7 @@
   }
 
   &--next {
-    right: 30px;
+    right: calc((100vw - 1075px) / 2);
 
     @media (min-width: $desktop-width) and (max-width: 1100px) {
       right: 10px;
