@@ -1,16 +1,9 @@
+import { showList, hideList } from './util.js';
+
 const accordion = document.querySelector('.accordion');
-const accordionTitles = accordion.querySelectorAll('.schedule__title');
 
-const hideList = (item, className) => {
-  item.classList.remove(className);
-}
-
-const showList = (item, className) => {
-  item.classList.add(className);
-}
-
-for (let i = 0; i < accordionTitles.length; i++) {
-  accordionTitles[i].addEventListener('click', toggleItem, false);
+if (accordion) {
+  var accordionTitles = accordion.querySelectorAll('.schedule__title');
 }
 
 function toggleItem() {
@@ -21,3 +14,5 @@ function toggleItem() {
     hideList(this, 'schedule__title--show');
   }
 }
+
+export { toggleItem, accordionTitles }

@@ -1,5 +1,4 @@
 const KEYCODE_TAB = 9;
-// const INDEX = document.querySelector('#index');
 const overlay = document.querySelector('.overlay');
 const body = document.querySelector('.page__body');
 const main = body.querySelector('main');
@@ -66,7 +65,22 @@ function setOverlayHide(overlay) {
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
+// Скрыть список
+
+const hideList = (item, className) => {
+  item.classList.remove(className);
+}
+
+// Показать список
+
+const showList = (item, className) => {
+  item.classList.add(className);
+}
+
+
 export {
+  showList,
+  hideList,
   isEscEvent,
   setOverlayHide,
   setOverlayVisible,
