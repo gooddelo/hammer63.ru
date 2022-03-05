@@ -1,4 +1,4 @@
-import { setOverlayHide, setOverlayVisible, trapFocus, body, overlay } from './util.js';
+import { setOverlayHide, setOverlayVisible, trapFocus, body, overlay, isEscEvent } from './util.js';
 
 // Popup
 
