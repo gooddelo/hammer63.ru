@@ -115,7 +115,7 @@
   }
 
   &--inst {
-    background: -webkit-gradient(linear, left bottom, color-stop(10%, #df993d), color-stop(60%, #c3276a), color-stop(100%, #7024c4));;
+    fill: none;
     background: linear-gradient(45deg, #df993d 10%, #c3276a 60%, #7024c4 100%);
   }
 
