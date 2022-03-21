@@ -7,25 +7,29 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  // overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
   background-color: #242222;
+  overflow-x: hidden;
 
-  // &::after {
-  //   content: url("../img/overlay-bcg.png");
-  //   position: absolute;
-  //   z-index: 2;
-  //   right: -593px;
-  //   top: -172px;
+  &::before {
+    content: url("../img/overlay-bcg.png");
+    position: absolute;
+    z-index: 2;
+    right: calc((100% - 1294px)/2);
+    top: 426px;
 
-  //   @media (max-width: $tablet-width) {
-  //     right: -849px;
-  //     top: -390px;
-  //   }
+    @media (min-width: $desktop-width) and (max-width: 1140px) {
+      right: 0;
+    }
 
-  //   @media (max-width: $mobile-width) {
-  //     right: -793px;
-  //     top: -921px;
-  //   }
-  // }
+    @media (max-width: $tablet-width) {
+      right: -278px;
+      top: 123px;
+    }
+
+    @media (max-width: $mobile-width) {
+      right: -793px;
+      top: -921px;
+    }
+  }
 }
