@@ -12,24 +12,51 @@
   overflow-x: hidden;
 
   &::before {
-    content: url("../img/overlay-bcg.png");
+
+    @supports not (content: url("../img/overlay-bcg.webp")) {
+      content: url("../img/overlay-bcg.png");
+    }
+
+    content: url("../img/overlay-bcg.webp");
     position: absolute;
     z-index: 2;
-    right: calc((100% - 1294px)/2);
     top: 426px;
 
-    @media (min-width: $desktop-width) and (max-width: 1140px) {
+    @media (min-width: 1300px) {
+      right: calc((100% - 1294px) / 2);
+    }
+
+    @media (min-width: $desktop-width) and (max-width: 1299px) {
       right: 0;
     }
 
     @media (max-width: $tablet-width) {
-      right: -278px;
-      top: 123px;
+
+      @supports not (content: url("../img/overlay-bcg-tab.webp")) {
+        content: url("../img/overlay-bcg-tab.png");
+      }
+
+      content: url("../img/overlay-bcg-tab.webp");;
+      right: 0;
+      top: 336px;
     }
 
     @media (max-width: $mobile-width) {
-      right: -793px;
-      top: -921px;
+
+      @supports not (content: url("../img/overlay-bcg-mob.webp")) {
+        content: url("../img/overlay-bcg-mob.png");
+      }
+
+      content: url("../img/overlay-bcg-mob.webp");
+      top: 235px;
+    }
+
+    @media (min-width: 375px) and (max-width: $mobile-width) {
+      right: calc((100% - 380px) / 2);
+    }
+
+    @media (min-width: $min-width) and (max-width: 375px) {
+      content: url("../img/overlay-bcg-mob.png");
     }
   }
 }

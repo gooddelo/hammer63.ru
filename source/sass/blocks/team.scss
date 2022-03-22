@@ -2,12 +2,10 @@
   display: flex;
   position: relative;
   height: 933px;
-  // overflow-x: clip;
 
   @media (max-width:$tablet-width) {
     height: 1061px;
   }
-
 
   @media (max-width: $mobile-width) {
     height: 908px;
@@ -15,19 +13,34 @@
   }
 
   &::after {
-    content: url("../img/overlay-bcg.png");
+
+    @supports not (content: url("../img/overlay-bcg.webp")) {
+      content: url("../img/overlay-bcg.png");
+    }
+
+    content: url("../img/overlay-bcg.webp");
     position: absolute;
     bottom: -174px;
     right: -150px;
 
     @media (max-width: $tablet-width) {
-      content: url("../img/overlay-bcg-tab.png");
+
+      @supports not (content: url("../img/overlay-bcg-tab.webp")) {
+        content: url("../img/overlay-bcg-tab.png");
+      }
+
+      content: url("../img/overlay-bcg-tab.webp");
       bottom: calc(100% - 721px);
       right: 0;
     }
 
     @media (max-width: $mobile-width) {
-      content: url("../img/overlay-bcg-mob.png");
+
+      @supports not (content: url("../img/overlay-bcg-mob.webp")) {
+        content: url("../img/overlay-bcg-mob.png");
+      }
+
+      content: url("../img/overlay-bcg-mob.webp");
       bottom: calc(100% - 1055px);
       right: calc((100vw - 381px) / 2);
     }
@@ -48,12 +61,6 @@
 
   @media (max-width: $mobile-width) {
     margin-top: 419px;
-    // margin-top: 203px;
-    // height: 621px;
-    // background-color: #242222;
-    // padding-top: 215px;
-    // clip-path: polygon(75% 11%, 100% 0, 100% 100%, 0 100%, 0 68%, 0 28%, 20% 27%, 40% 23%, 58% 18%);
-    // background-image: url("../img/overlay-bcg-test.png");
   }
 
   h2,

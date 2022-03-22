@@ -1,18 +1,15 @@
 .services {
   position: relative;
   min-height: 837px;
-  border-radius: 100% 100% 55% 55%/50% 50% 100% 100%;
+  border-radius: 50% 50% 0% 0% / 35% 35% 65% 65% ;
   background: linear-gradient(0deg, #242222 50%, #432445 100%);
-  // overflow-x: clip;
-  // z-index: 10;
 
   @media (max-width: $tablet-width) {
-    border-radius: 66% 66% 55% 55%/30% 30% 100% 100%;
     min-height: 656px;
   }
 
   @media (max-width: $mobile-width) {
-    border-radius: 80% 80% 55% 55%/15% 15% 100% 100%;
+    border-radius: 50% 50% 0% 0% / 20% 20% 65% 65% ;
   }
 
   h2 {
@@ -28,26 +25,6 @@
       padding-top: 58px
     }
   }
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   z-index: -10;
-  //   width: 4032px;
-  //   height: 3975px;
-  //   border-radius: 50%;
-  //
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   top: 0;
-
-  //   @media (max-width: $tablet-width) {
-  //     width: 1831px;
-  //     height: 2023px;
-  //     // left: 52.5%;
-  //     // transform: translateX(-50%);
-  //   }
-  // }
 }
 
 .services__wrapper {

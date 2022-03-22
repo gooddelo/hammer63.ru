@@ -9,24 +9,6 @@
   @media (max-width: $mobile-width) {
     min-height: 368px;
   }
-
-  // &::after {
-  //   content: url("../img/overlay-bcg.png");
-  //   position: absolute;
-  //   z-index: 2;
-  //   right: -593px;
-  //   top: -172px;
-
-  //   @media (max-width: $tablet-width) {
-  //     right: -849px;
-  //     top: -390px;
-  //   }
-
-  //   @media (max-width: $mobile-width) {
-  //     right: -793px;
-  //     top: -921px;
-  //   }
-  // }
 }
 
 .intro__wrapper {
@@ -100,25 +82,24 @@
   background-size: cover;
 
   @media (max-width: $tablet-width) {
-    top: -88px;
-    right: 19px;
+    top: -92px;
+    right: -4px;
   }
 
   @media (max-width: $mobile-width) {
-    top: -369px;
-    right: calc((100% - 294px) / 2);
+    top: -350px;
+    right: calc((100% - 310px) / 2);
   }
 
   img {
+    height: auto;
 
     @media (max-width: $tablet-width) {
-      width: 392px;
-      height: 456px;
+      width: 409px;
     }
 
     @media (max-width: $mobile-width) {
-      width: 311px;
-      height: 323px;
+      width: 271px;
     }
   }
 }
