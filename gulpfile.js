@@ -99,6 +99,7 @@ gulp.task("copy", function () {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
+    "source/.htaccess",
     // "source//*.ico",
     // "source/icon.svg",
     // "source/apple.png",
