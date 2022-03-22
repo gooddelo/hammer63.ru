@@ -11,6 +11,11 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   @media (max-width: $mobile-width) {
     justify-content: center;
   }
@@ -33,6 +38,13 @@
   width: 183px;
   display: flex;
   flex-flow: column wrap;
+  flex-shrink: 10;
+  flex-basis: 16%;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    margin-left: 0;
+  }
 
   @media (max-width: $mobile-width) {
     margin-left: 0;
@@ -83,6 +95,10 @@
   display: flex;
   align-items: center;
   height: 65px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 20px;
+  }
 
   @media (max-width: $mobile-width) {
     margin-top: 21px;
