@@ -43,6 +43,13 @@
 
 .header__nav-wrapper {
   display: flex;
+
+  &--nojs {
+
+    .header__tel {
+      margin-right: 0;
+    }
+  }
 }
 
 .header__nav-list {

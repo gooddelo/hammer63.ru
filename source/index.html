@@ -26,7 +26,7 @@
       </svg>
     </a>
     <nav class="header__nav">
-      <div class="header__nav-wrapper">
+      <div class="header__nav-wrapper header__nav-wrapper--nojs">
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a href="#about">Почему мы?</a>
@@ -44,7 +44,7 @@
             <a href="#contact">Контакты</a>
           </li>
         </ul>
-        <button class="button button--burger" type="button"><span></span></button>
+        <button class="button button--nojs button--burger" type="button"><span></span></button>
         <a class="header__tel" href="tel:+79608081827">8 (960) 808-18-27</a>
       </div>
     </nav>
@@ -63,19 +63,19 @@
               <svg viewBox="0 0 84 84" fill="none" width="35" height="35" role="img">
                 <use xlink:href="img/sprite.svg#icon-solarium"></use>
               </svg>
-              <a href="massage.html">Солярий</a>
+              <a href="massage">Солярий</a>
             </li>
             <li class="intro__item">
               <svg viewBox="0 0 84 84" fill="none" width="35" height="35" role="img">
                 <use xlink:href="img/sprite.svg#icon-cryosauna"></use>
               </svg>
-              <a href="massage.html">Криосауна</a>
+              <a href="massage">Криосауна</a>
             </li>
             <li class="intro__item">
               <svg viewBox="0 0 84 84" fill="none" width="35" height="35" role="img">
                 <use xlink:href="img/sprite.svg#icon-hamam"></use>
               </svg>
-              <a href="massage.html">Хамам</a>
+              <a href="massage">Хамам</a>
             </li>
           </ul>
         </div>
@@ -140,23 +140,23 @@
       <div class="container">
         <h2>УСЛУГИ И ТАРИФЫ</h2>
         <div class="services__control container">
-          <button class="services__btn services__btn--prev swiper-button-prev" type="button">
+          <button class="services__btn services__btn--nojs services__btn--prev swiper-button-prev" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
             <svg width="46" height="88" role="button">
               <use xlink:href="img/sprite.svg#icon-arrow"></use>
             </svg>
           </button>
-          <button class="services__btn services__btn--next swiper-button-next" type="button">
+          <button class="services__btn services__btn--nojs services__btn--next swiper-button-next" type="button">
             <span class="visually-hidden">Следующий слайд</span>
             <svg width="46" height="88" role="button">
               <use xlink:href="img/sprite.svg#icon-arrow"></use>
             </svg>
           </button>
         </div>
-        <div class="services__wrapper swiper">
+        <div class="services__wrapper services__wrapper--nojs swiper">
           <ul class="services__list swiper-wrapper">
             <li class="services__item swiper-slide">
-              <a href="dance.html">
+              <a href="dance">
                 <picture>
                   <source type="image/webp" srcset="img/services/services-dance.webp 1x, img/services/services-dance@2x.webp 2x">
                   <img loading="lazy" src="img/services/services-dance.png" srcset="img/services/services-dance@2x.png 2x" width="257" height="296" alt="">
@@ -165,7 +165,7 @@
               </a>
             </li>
             <li class="services__item swiper-slide">
-              <a href="fighting-art.html">
+              <a href="fighting-art">
                 <picture>
                   <source type="image/webp" srcset="img/services/services-fight.webp 1x, img/services/services-fight@2x.webp 2x">
                   <img loading="lazy" src="img/services/services-fight.png" srcset="img/services/services-fight@2x.png 2x" width="257" height="296" alt="">
@@ -174,7 +174,7 @@
               </a>
             </li>
             <li class="services__item swiper-slide">
-              <a href="gym.html">
+              <a href="gym">
                 <picture>
                   <source type="image/webp" srcset="img/services/services-gym.webp 1x, img/services/services-gym@2x.webp 2x">
                   <img loading="lazy" src="img/services/services-gym.png" srcset="img/services/services-gym@2x.png 2x" width="257" height="296" alt="">
@@ -183,7 +183,7 @@
               </a>
             </li>
             <li class="services__item swiper-slide">
-              <a href="massage.html">
+              <a href="massage">
                 <picture>
                   <source type="image/webp" srcset="img/services/services-massage.webp 1x, img/services/services-massage@2x.webp 2x">
                   <img loading="lazy" src="img/services/services-massage.png" srcset="img/services/services-massage@2x.png 2x" width="257" height="296" alt="">
@@ -194,9 +194,16 @@
           </ul>
           <div id="schedule-list"></div>
         </div>
-        <div class="services__schedule">
-          <p>ПОСМОТРЕТЬ РАСПИСАНИЕ НА ГРУППОВЫЕ ЗАНЯТИЯ</p>
-          <button class="button button--services" name="buttonPopup" data-popupid="schedule" type="button">Посмотреть расписание</button>
+        <div class="services__schedule services__schedule--nojs">
+          <div class="services__schedule-wrapper-js">
+            <p>ПОСМОТРЕТЬ РАСПИСАНИЕ НА ГРУППОВЫЕ ЗАНЯТИЯ</p>
+            <button class="button button--services" name="buttonPopup" data-popupid="schedule" type="button">Посмотреть расписание</button>
+          </div>
+          <div class="services__schedule-wrapper-nojs">
+            <p>ПОСМОТРЕТЬ РАСПИСАНИЕ</p>
+            <a href="schedule-fight" class="button button--schedule">Боевые искусства</a>
+            <a href="schedule-dance" class="button button--schedule">Танцы и фитнес-направления</a>
+          </div>
         </div>
       </div>
     </section>
@@ -211,7 +218,7 @@
           сделать не просто помещение с тренажерами, а реализовать идеи тренеров и спортсменов о комфортной и удобной среде. Клубе, где люди улыбаются и жмут руки,
           поддерживают и мотивируют друг друга.
         </p>
-        <a href="team.html" class="button button--team">Посмотреть нашу команду</a>
+        <a href="team" class="button button--team">Посмотреть нашу команду</a>
       </div>
       <div class="team__coaches">
         <picture>
@@ -276,8 +283,8 @@
       <button class="button button--close"></button>
       <div class="schedule__wrapper">
         <h2>ПОСМОТРЕТЬ РАСПИСАНИЕ</h2>
-        <a href="schedule-fight.html" class="button button--schedule">Боевые искусства</a>
-        <a href="schedule-dance.html" class="button button--schedule">Танцы и фитнес-направления</a>
+        <a href="schedule-fight" class="button button--schedule">Боевые искусства</a>
+        <a href="schedule-dance" class="button button--schedule">Танцы и фитнес-направления</a>
       </div>
     </section>
   </template>

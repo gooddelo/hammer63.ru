@@ -4,6 +4,21 @@ import { showPopup, btnsOpenPopup } from './popup.js';
 import { smoothScroll, anchors } from './anchor.js';
 import { toggleItem, accordionTitles } from './accordion.js';
 
+const headerNavWrap = document.querySelector('.header__nav-wrapper--nojs');
+const buttonNoJs = document.querySelector('.button--nojs');
+const buttonSlider = document.querySelectorAll('.services__btn--nojs');
+const boxSlider = document.querySelector('.services__wrapper--nojs');
+const servicesWrap = document.querySelector('.services__schedule--nojs');
+
+headerNavWrap.classList.remove('header__nav-wrapper--nojs');
+buttonNoJs.classList.remove('button--nojs');
+boxSlider.classList.remove('services__wrapper--nojs');
+servicesWrap.classList.remove('services__schedule--nojs');
+
+for (let btnSlider of buttonSlider) {
+  btnSlider.classList.remove('services__btn--nojs');
+}
+
 // Плавный скролл
 
 for (let i = 0; i < anchors.length; i++) {

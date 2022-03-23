@@ -32,7 +32,12 @@ gulp.task("css", function () {
 
 gulp.task("server", function () {
   server.init({
-    server: "build/",
+    server: {
+      baseDir: './build',
+        serveStaticOptions: {
+        extensions: ['html']
+      }
+    },
     notify: false,
     open: true,
     cors: true,

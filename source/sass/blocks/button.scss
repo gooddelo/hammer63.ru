@@ -156,6 +156,7 @@
     margin-top: 0;
     margin-bottom: 29px;
     width: 100%;
+    max-width: 333px;
     padding: 0 10px;
     text-align: center;
 
@@ -302,6 +303,10 @@
       &:active {
         opacity: 0.7;
       }
+    }
+
+    &--nojs {
+      display: none;
     }
   }
 }

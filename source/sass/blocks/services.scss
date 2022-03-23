@@ -32,6 +32,10 @@
   margin: 0 auto;
   overflow: hidden;
 
+  &--nojs {
+    overflow: auto;
+  }
+
   @media (max-width: $tablet-width) {
     width: 614px;
   }
@@ -128,7 +132,6 @@
 
 .services__control {
 
-
   @media (max-width: $tablet-width) {
     position: relative;
     width: 720px;
@@ -149,6 +152,10 @@
   padding: 0;
   width: 46px;
   height: 100px;
+
+  &--nojs {
+    display: none;
+  }
 
   svg {
     fill: none;
@@ -236,7 +243,11 @@
 
   @media (max-width: $mobile-width) {
     margin-top: 45px;
+    justify-content: center;
   }
+}
+
+.services__schedule {
 
   p {
     @include font($montserrat, 30px, 38px, 800, normal);
@@ -248,7 +259,8 @@
 
     @media (max-width: $tablet-width) {
       @include resize-txt(22px, 27px);
-      width: 384px;
+      max-width: 384px;
+      width: 100%;
       letter-spacing: 1px;
       padding-top: 5px;
     }
@@ -256,6 +268,38 @@
     @media (max-width: $mobile-width) {
       margin: 0 auto;
       padding: 0;
+      text-align: center;
+    }
+  }
+
+  .services__schedule-wrapper-js {
+    display: flex;
+
+    @media (max-width: $mobile-width) {
+      flex-flow: column wrap;
+    }
+  }
+
+  .services__schedule-wrapper-nojs {
+    display: none;
+  }
+
+  &--nojs {
+
+    .services__schedule-wrapper-js {
+      display: none;
+    }
+
+    .services__schedule-wrapper-nojs {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      p {
+        padding-bottom: 20px;
+      }
     }
   }
 }
