@@ -12,8 +12,11 @@ const servicesWrap = document.querySelector('.services__schedule--nojs');
 
 headerNavWrap.classList.remove('header__nav-wrapper--nojs');
 buttonNoJs.classList.remove('button--nojs');
-boxSlider.classList.remove('services__wrapper--nojs');
-servicesWrap.classList.remove('services__schedule--nojs');
+
+if (boxSlider && servicesWrap) {
+  boxSlider.classList.remove('services__wrapper--nojs');
+  servicesWrap.classList.remove('services__schedule--nojs');
+}
 
 for (let btnSlider of buttonSlider) {
   btnSlider.classList.remove('services__btn--nojs');
@@ -40,6 +43,7 @@ for (let i = 0; i < anchors.length; i++) {
 
 if (accordionTitles) {
   for (let i = 0; i < accordionTitles.length; i++) {
+    accordionTitles[i].classList.remove('schedule__title--nojs');
     accordionTitles[i].addEventListener('click', toggleItem, false);
   }
 }
