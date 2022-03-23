@@ -68,7 +68,6 @@
   @media (max-width: $mobile-width) {
     justify-content: flex-start;
     padding: 0 11px;
-    margin-bottom: 25px;
   }
 
   svg {
@@ -215,6 +214,17 @@
 
   & + .schedule__list {
     transition: $trans--300;
+    display: block;
+  }
+}
+
+.schedule__title--nojs {
+
+  svg {
+    display: none;
+  }
+
+  & + .schedule__list {
     display: block;
   }
 }
