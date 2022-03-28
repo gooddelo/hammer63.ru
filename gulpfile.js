@@ -105,10 +105,9 @@ gulp.task("copy", function () {
     "source/img/**",
     "source/js/**",
     "source/.htaccess",
-    // "source//*.ico",
-    // "source/icon.svg",
-    // "source/apple.png",
-    // "source/manifest.webmanifest"
+    "source/favicon.ico",
+    "source/icon.svg",
+    "source/manifest.webmanifest"
     ], {
       base: "source"
     })
