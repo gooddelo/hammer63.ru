@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+sitemap: https://hammer63.ru/Sitemap.xml
