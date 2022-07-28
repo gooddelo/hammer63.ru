@@ -29,6 +29,10 @@
   margin: 0;
 }
 
+.intro__bot {
+  margin-top: 20px;
+}
+
 .intro__desc {
   @include font($montserrat, 20px, 24px, 400, normal);
   padding-top: 10px;
