@@ -44,7 +44,7 @@
 
 .intro__offer {
   @include font($montserrat, 36px, 44px, 700, normal);
-  padding-top: 68px;
+  padding-top: 38px;
 
   @media (max-width: $tablet-width) {
     @include resize-txt(30px, 37px);
