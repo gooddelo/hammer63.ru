@@ -53,5 +53,17 @@
   "dependencies": {
     "del": "^4.1.1",
     "gift": "^0.10.2"
-  }
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gooddelo/hammer63.ru.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gooddelo/hammer63.ru/issues"
+  },
+  "homepage": "https://github.com/gooddelo/hammer63.ru#readme"
 }
