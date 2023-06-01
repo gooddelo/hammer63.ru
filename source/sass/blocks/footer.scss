@@ -9,11 +9,13 @@
 
 .footer__wrapper {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   @media (max-width: $mobile-width) {
@@ -21,14 +23,26 @@
   }
 }
 
-.footer__suggestions {
-  margin-left: 77px;
+// .footer__suggestions {
+//   // margin-left: 77px;
+// }
+
+// Зафлексеный контейнер для контактов
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: $tablet-width) {
+    align-items: center;
+  }
 }
 
 .footer__contact-1,
 .footer__contact-2,
 .footer__contact-3 {
-  margin-left: 42px;
+  // margin-left: 42px;
+  margin-left: 0px;
 }
 
 .footer__suggestions,
@@ -77,13 +91,11 @@
   }
 }
 
-.footer__contact-1 {
-  margin-top: 14px;
-}
-
+.footer__contact-1,
 .footer__contact-2,
 .footer__contact-3 {
-  margin-top: 21px;
+  // margin-top: 21px;
+  margin-top: 0px;
 }
 
 .footer__contact-3 {
